@@ -32,6 +32,11 @@ public class Bleeding : Module {
     //   syntax, but as long as you are absolutely sure it's unique, it's fine.
     public Bleeding() : base("thornExamples.bleeding", "Bleeding", "Makes you constantly bleed",
         ModuleCategory.Gameplay) {
+        // Instantiate the settings. In order, the fields are:
+        // - GUID: The identifier that's unique within your module. This name is used in the config file.
+        // - Name: The user-friendly name, displayed on the config menu
+        // - Description: The long text describing what the setting does. This shows up when hovering the config menu entry
+        // - Default value
         DamagePerTick = CreateSetting(
             "dmgPerTick", "Damage per tick", "How much to bleed each tick", 5
         );
